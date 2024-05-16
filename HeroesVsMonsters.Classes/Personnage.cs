@@ -49,7 +49,13 @@
         {
             int degats = D4.lance() + CalculModificateur(Force);
             adversaire.PointDeVie -= degats;
-            Console.WriteLine($"{Nom} inflige {degats} point(s) de dégats à {adversaire.Nom}");
+            Partie.DefilementTexte($"{Nom} inflige {degats} point(s) de dégats à {adversaire.Nom}", "");
         }
+
+        private static void RecupererPointDeVie(Heros heros)
+        {
+            heros.PointDeVie = heros.PointDeVieMax;
+        }
+        public RecupererPointDeVieHandler soins = new(RecupererPointDeVie);
     }
 }

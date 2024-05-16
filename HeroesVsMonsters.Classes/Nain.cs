@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 
 namespace HeroesVsMonsters_2.Classes
 {
-    public class Nain : Hero
+    public class Nain : Heros
     {
         public override int Endurance => base.Endurance + 2;
         public Nain(string nom) : base(nom) {
